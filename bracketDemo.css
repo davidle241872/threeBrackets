@@ -33,15 +33,16 @@ li.game {
     padding-left: 10px;
 }
 
-li.game.winner{
+li.game.loser{
     font-weight:bolder;
+    color:grey;
 }
 li.game span{
     float:right;
     margin-right:px;
 }
  /* this will create the border between the two teams */
-li.game-top{ border-bottom:1px solid black; }
+li.game-top{ border-bottom:1px solid green; }
 /* this will create the line and spacer between The first and second team */
    li.game-spacer{ 
     border-right:5px solid black;
@@ -101,11 +102,14 @@ header {
     background-color: #fe5200;
     padding: 0;
   }
-  .first-four-winner li.game-left,
+  .first-four-loser li.game-left,
 .round-1 li.game-left,
 .round-2 li.game-left,
 .round-3 li.game-left,
 .round-4 li.game-left,
+.round-5 li.game-left,
+.round-6 li.game-left,
+.round-7 li.game-left
 .semi-final li.game-left {
     padding-left: 0.5em;
 }
@@ -134,9 +138,7 @@ li.game-right {
 li.game-left {
     border-right: 1px solid #000000;
 }
-li.game-bottom {
-  border-bottom: 1px solid #000000;
-}
+
 
 li.game-top {
   border: none;
@@ -158,8 +160,57 @@ li.game-right.spacer {
     text-align: center;
 }
  
+.player1 {
+    color: black;
+}
 
+.Winner {
+  color: green;
+}
 
+.congrats .popuptext {
+  visibility: hidden;
+  width: 1300px;
+  height: 2000px;
+  background-color: #555;
+  color: goldenrod;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  font-size: 25px;
+  position: absolute;
+}
+.congrats{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.congrats .popuptext{
+  background-image:url('marchMadnessWinners.png');
+}
+.congrats .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.congrats .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.WinnerDinner {
+  color: green;
+}
 
 
 
